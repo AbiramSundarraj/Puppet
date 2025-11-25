@@ -1,9 +1,6 @@
-class app_nmap () {
-
+class app_nmap {
     package { 'nmap':
         ensure => installed,
     }
-
-
 
 }
