@@ -1,12 +1,12 @@
 class app_rsyslog (
-    String $name = 'rsyslog',
+    String $pkg_name = 'rsyslog',
 ) {
-    package { $name:
+    package { $pkg_name:
         ensure => latest,
     }
 
-    service { $name:
-        subscribe => Package[$name],
+    service { $pkg_name:
+        subscribe => Package[$pkg_name],
         ensure => running,
         enable => true,
     }
